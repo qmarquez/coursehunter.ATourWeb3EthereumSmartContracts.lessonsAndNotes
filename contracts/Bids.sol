@@ -66,7 +66,7 @@ contract Bids {
     ) public payable {
         uint256 totalBid = bidLocal + bidVisitor;
 
-        require(msg.value != totalBid, "You don't send enaugh money");
+        require(msg.value == totalBid, "You don't send enaugh money");
 
         if (areBidsOpen) {
             addressesToBids[msg.sender].push(Bid(game, bidLocal, bidVisitor));
