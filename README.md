@@ -12,6 +12,20 @@ Criptozombies [web page](https://cryptozombies.io/) (school of bloackchain)
 
 ---
 
+## Setup the app
+
+Download the project:
+
+1. `npm i` install dependecies
+2. `npm run setup_localeth` launch the local ethereum network
+3. `npm run setup_webserver` launch the webserver to serve the FE app **(PYHTON REQUIERED)**
+4. `npm run webpack` launch webpack to compile the FE
+5. With everything working it's time to deploy the contract `npm run lhdeploy_bids` *Warning, windows based system could not recognize well cli variables, if something fail you could try: `npx hardhat run scripts/deploy-Bids.ts --network localhost`*
+6. Get the deployed contract address and paste it on index.ts:47
+7. Go to the browser, add localhost to metamask in case you don't have it, navigate to `localhost:6969`, allow the access to metamask and you can start to try!
+
+---
+
 ## P1. The Foundation
 
 ### Typical structure of a solidity project
